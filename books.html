@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font awesome icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- project title -->
+    <title>Bible Books</title>
+    <!-- custom styles -->
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./books.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="testament">
+        <!-- old testament navBar -->
+        <div class="testamentNavBar">
+          Old Testament
+          <!-- old testament nav Icon container -->
+          <div class="navContainer">
+            <span class="navIcon">
+              <i class="fa-sharp fa-solid fa-angle-up"></i>
+            </span>
+            <span class="navIcon">
+              <i class="fa-sharp fa-solid fa-angle-down"></i>
+            </span>
+          </div>
+          <!-- old testament nav Icon container -->
+        </div>
+        <!-- end old testament navBar -->
+        <!-- old testament books container -->
+        <div class="booksContainer"></div>
+        <!-- end old testament books container -->
+      </div>
+      <!-- 
+        ===== New Testament =====
+       -->
+      <div class="testament">
+        <!-- new testament navBar -->
+        <div class="testamentNavBar">
+          New Testament
+          <!-- new testament nav Icon container -->
+          <div class="navContainer">
+            <span class="navIcon">
+              <i class="fa-sharp fa-solid fa-angle-up"></i>
+            </span>
+            <span class="navIcon">
+              <i class="fa-sharp fa-solid fa-angle-down"></i>
+            </span>
+          </div>
+          <!-- new testament nav Icon container -->
+        </div>
+        <!-- end new testament navBar -->
+        <!-- old testament books container -->
+        <div class="booksContainer second"></div>
+        <!-- end old testament books container -->
+      </div>
+      <!-- 
+        ======= General Container =======
+       -->
+      <div class="generalContainer">
+        <div class="testamentNavBar"></div>
+        <!-- old testament chapters container -->
+        <div class="chaptersContainer"></div>
+        <!-- end old testament chapters container -->
+        <!-- old testament verses container -->
+        <div class="versesContainer"></div>
+        <!-- end old testament verses container -->
+        <!-- old testament verses container -->
+        <div class="versesTextContainer"></div>
+        <!-- end old testament verses container -->
+      </div>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>

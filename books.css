@@ -1,0 +1,109 @@
+.testament:not(:last-of-type) {
+  margin-bottom: 2rem;
+}
+.testamentNavBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5rem;
+  background-color: var(--grey);
+  color: var(--darkest);
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+  padding: 10px 7px;
+  border-radius: 10px;
+}
+
+.booksContainer,
+.chaptersContainer,
+.versesContainer,
+.versesTextContainer {
+  display: none;
+}
+
+.fa-sharp {
+  cursor: pointer;
+  color: var(--grey);
+  background-color: var(--darker);
+  padding: 0.3rem 0.3rem;
+  transition: all 0.2s;
+}
+
+.navIcon .fa-angle-down {
+  display: none;
+}
+
+.book {
+  font-size: 1.105rem;
+  text-transform: uppercase;
+  padding: 1rem;
+  border-radius: 5px;
+  background-color: var(--light);
+  border: transparent;
+  color: var(--darkest);
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.book:hover,
+.fa-sharp:hover {
+  color: var(--light);
+  background-color: var(--purple);
+  border: transparent;
+}
+
+.verseText {
+  font-size: 20px;
+  line-height: 1.5;
+  color: var(--light);
+}
+
+.verseNumber {
+  color: var(--purple);
+}
+
+/* javascript */
+.generalContainer {
+  display: none;
+}
+
+.displayBlock {
+  display: block;
+}
+
+.active.booksContainer {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.active {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.active .navIcon .fa-angle-down {
+  display: block;
+  background-color: var(--purple);
+  color: var(--light);
+}
+
+.active .navIcon .fa-angle-up {
+  display: none;
+}
+
+.testament.active {
+  display: none;
+}
+
+@media screen and (min-width: 500px) {
+  .booksContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .booksContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

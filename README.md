@@ -2,7 +2,7 @@
 
 ## How the bible application is expected to work are as follows
 
-- When a user launches the application, a homepage is shown which has a scripture displayed for the day from a random selection
+- When a user launches the application, a get request is made to ##"https://labs.bible.org/api/?passage=random&type=json" to return a random verse for the day. a homepage is shown which has a scripture displayed for the day from a random selection
 
 * On the same page, should be a button with the word "READ" that takes the user into the application
 

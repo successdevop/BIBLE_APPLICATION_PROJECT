@@ -22,10 +22,12 @@ async function init() {
 
   // 1. Load and display books of the bible
   const oldTestamentBibleBooks = bibleDatabase.oldTestament
+    .sort()
     .map((book) => `<button class="book">${book}</button>`)
     .join("");
 
   const newTestamentBibleBooks = bibleDatabase.newTestament
+    .sort()
     .map((book) => `<button class="book">${book}</button>`)
     .join("");
 

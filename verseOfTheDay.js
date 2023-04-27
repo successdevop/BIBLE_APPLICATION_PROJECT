@@ -2,20 +2,26 @@ const bibleVerseOfTheDay = document.querySelector(".bible-verse");
 
 // fetching data from Bible.org API
 async function getDailyVerse() {
-  let response = await fetch(
-    "https://labs.bible.org/api/?passage=random&type=json"
-  );
+  let response = await fetch("verseOfTheDay.json");
 
   return await response.json();
 }
 
 async function displayDailyBibleVerse() {
-  let verse = await getDailyVerse();
+  let data = await getDailyVerse();
+  const randomBook = data.books[Math.floor(Math.random() * data.books.length)];
+  const randomChapter =
+    data.chapters[Math.floor(Math.random() * data.chapters.length)];
+  const randomVerse =
+    data.verses[Math.floor(Math.random() * data.verses.length)];
+  const randomVerseText =
+    data.versesText[Math.floor(Math.random() * data.versesText.length)];
+
   const htmlCode = `
           <p>
-            ${verse[0].text}
+            ${randomVerseText.text}
           </p>
-          <span>${verse[0].bookname} ${verse[0].chapter}:${verse[0].verse}</span>`;
+          <span>${randomBook} ${randomChapter}:${randomVerse}</span>`;
 
   bibleVerseOfTheDay.innerHTML = htmlCode;
 }

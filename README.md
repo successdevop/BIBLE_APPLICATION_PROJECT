@@ -2,7 +2,7 @@
 
 ## How the bible application is expected to work are as follows
 
-- When a user launches the application, a get request is made to "https://labs.bible.org/api/?passage=random&type=json" which returns a random verse of the bible. This random bible verse is displayed on the homepage as verse of the day.
+- When a user launches the application, a get request is made to "verseOfTheDay.json", which returns a resourse object. When this object is returned, the javascript method "Math.random()" is used to retrieve the bible book from the books array, the chapter, the verse and the verse content from their respective arrays from the resource object and displayed on the homepage as verse of the day.
 
 * On the homepage, there is also a button with the word "READ", the button has an href that links to a page "./books.html", when the button is clicked it takes us to the books page on the application.
 
